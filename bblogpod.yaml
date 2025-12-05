@@ -4,7 +4,7 @@ metadata:
   name: benblog
   namespace: vmservice
 spec:
-  replicas: 1
+  replicas: 3
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -15,7 +15,7 @@ spec:
         app: benblog
     spec:
       containers:
-        - image: harbor.home.ads:443/library/benblog:v8
+        - image: harbor.home.ads:443/library/benblog:v9
           name: benblog
           ports:
             - containerPort: 80
